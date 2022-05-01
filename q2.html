@@ -1,0 +1,82 @@
+<html>
+
+<head>
+
+    <script type="text/javascript" src="jquery-3.6.0.js">
+    </script>
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#btnSubmit').click(function () {
+                var result = $('input[type="radio"]:checked');
+                var num1 = $('#num1');
+                var num2 = $('#num2');
+
+                if (result.length > 0) {
+
+                    if(result.val() === "ADD"){
+                        $('#divResult').val(num1.val() + num2.val());
+                    }else if(result.val() === "SUBTRACT"){
+                        $('#divResult').val(num1.val() - num2.val());
+                    }else if(result.val() === "MULTIPLY"){
+                        $('#divResult').val(num1.val() * num2.val());
+                    }else if(result.val() === "DIVIDE"){
+                        $('#divResult').val(num1.val() / num2.val());
+                    }
+
+
+
+
+                    // $('#divResult').val(result.val() + " is checked");
+                }
+                else {
+                    $('#divResult').val("No radio button checked");
+                }
+            });
+        });
+    </script>
+
+
+
+
+
+</head>
+
+<body>
+    <label for="fname">Number 1</label>
+    <input type="text" id="num1"><br><br>
+
+    <label for="fname">Number 2</label>
+    <input type="text" id="num2"><br><br>
+    
+    <label for="fname">Result</label>
+    <input type="text" id="divResult"><br><br>
+    
+    <input type="radio" name="gender" value="ADD">ADD
+    <input type="radio" name="gender" value="SUBTRACT">SUBTRACT
+    <input type="radio" name="gender" value="MULTIPLY">MULTIPLY
+    <input type="radio" name="gender" value="DIVIDE">DIVIDE
+    
+    <input id="btnSubmit" type="submit" value="submit" />
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+<!-- 
+<body style="font-family:Arial">
+    Gender :
+    <input type="radio" name="gender" value="Male">Male
+    <input type="radio" name="gender" value="Female">Female
+    <input id="btnSubmit" type="submit" value="submit" />
+    <div id="divResult">
+    </div>
+</body> -->

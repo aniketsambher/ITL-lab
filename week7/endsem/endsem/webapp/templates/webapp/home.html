@@ -1,0 +1,23 @@
+<html>
+<body>
+    <div >
+        
+       <h3 >Available Polls</h3>
+        
+                
+        <ul >
+            {% for poll in polls %}
+            <li >
+                <strong>{{ poll.question }}</strong>
+                <span >
+                    <a href="{% url 'vote' poll.id %}" >Vote</a> 
+                    <a href="{% url 'results' poll.id %}" >View Results</a> 
+                </span>
+            </li>
+            {% endfor %}
+        </ul>
+
+    </div>
+
+</body>
+</html>

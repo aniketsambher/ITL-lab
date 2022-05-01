@@ -1,0 +1,26 @@
+<html>
+<body>
+<div >  
+    <div>
+        <h3>Poll Result</h3>
+    </div>
+
+    <div>
+        <h3>{{ poll.question }}</h3>
+    </div>
+
+    <ul>
+        <li >{{ poll.option_one }} &mdash; <strong>{{ poll.option_one_count }}</strong></li>
+        <li >{{ poll.option_two }} &mdash; <strong>{{ poll.option_two_count }}</strong></li>
+        <li >{{ poll.option_three }} &mdash; <strong>{{ poll.option_three_count }}</strong></li>
+    </ul>
+
+    <div >
+        Total &mdash; <strong>{{ poll.total }}</strong>
+    </div>
+
+        
+    
+</div>
+</body>
+</html>

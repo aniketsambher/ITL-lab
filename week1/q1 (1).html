@@ -1,0 +1,53 @@
+<html>
+<style>
+table, th, td {
+  border:1px solid black;
+}
+
+tr:nth-child(even) {
+    background-color: Lightgreen;
+}
+
+</style>
+
+<script type = "text/javascript" src = "jquery-3.6.0.js">
+</script>
+
+<script type = "text/javascript" language = "javascript">
+    $(document).ready(function() {
+
+        $('#button1').click(function () {
+        
+            $("#table1").attr("align", "left");
+            $("#image").attr("align", "left");
+        });      
+    });
+</script>
+
+
+
+
+<body>
+
+<table id="table1" align="right">
+  <tr>
+    <td>Emil</td>
+    <td>Tobias</td>
+    <td>Linus</td>
+  </tr>
+  <tr>
+    <td>Emil</td>
+    <td>Tobias</td>
+    <td>Linus</td>
+  </tr>
+  <tr>
+    <td>Emil</td>
+    <td>Tobias</td>
+    <td>Linus</td>
+  </tr>
+</table>
+<img id="image" src="sample.jfif" alt="Flowers in Chania" align="right">
+<button id="button1" type="button">Click Me!</button>
+
+</body>
+</html>

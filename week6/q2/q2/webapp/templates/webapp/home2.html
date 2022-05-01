@@ -1,0 +1,19 @@
+<html>
+ 
+ <body>
+
+    <form action = "{% url 'page1' %}" method = "post">
+        {% csrf_token %} 
+        Name : <strong>{{name}}</strong>
+        roll no : <strong>{{roll_no}}</strong>
+        subject : <strong>{{subject}}</strong>
+    <input type="submit" value="Submit">
+</form>
+
+
+
+ 
+ </body>
+ 
+</html>
+
