@@ -1,0 +1,27 @@
+
+<html lang="en">
+<body>
+    <form action="search" method="POST">
+        {% csrf_token %}
+        {{form}}
+        <br>
+        <input type="submit" value="search">
+    </form><br>
+    <table>
+        {% for employee in employees %}
+        <tr>
+            <td>{{employee.p_name}}</td>
+            <td>{{employee.city}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html> 
+
+
+
+
+
+    
+    
+    
