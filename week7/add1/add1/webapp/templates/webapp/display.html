@@ -1,0 +1,43 @@
+
+<html>
+<body>
+
+    <h1>Index</h1>
+    <form method="post">
+        {% csrf_token %}
+        <select name="name">
+            {% for e in names %}
+            <option value="{{ e.firstname }}"
+                    {% if selected_name == e.firstname %}
+                    selected="selected"
+                    {% endif %}>
+                {{ e.firstname }}
+            </option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="Select">
+    </form>
+
+
+
+
+    {% if selected_name %}
+    <p>
+        Nice, you selected: {{ selected_name }}
+    </p>
+    <p>
+        Lastname :{{details.firstname}}
+    </p>
+    <p>
+        phone {{details.phone}}
+    </p>
+
+
+    <span>
+        <a href="{% url 'update' id=selected_name %}">update</a>
+        <a href="{% url 'delete' id=selected_name %}">delete</a>
+    </span>
+    {% endif %}
+
+</body>
+</html>
